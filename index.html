@@ -13,23 +13,50 @@
     .wrapper {
       padding: 10px;
       margin: 4px;
+      display: flex;
+      align-items: center;
     }
-   h1 {
-  font-size: 144px;
-  font-weight: 700;
-  margin: 0;
-}
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid #030c0c;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+    .text {
+      margin-left: 10px;
+    }
+    h1 {
+      font-size: 144px;
+      font-weight: 700;
+      margin: 0;
+    }
     p {
       font-size: 20px;
       font-weight: 300;
       margin: 0;
     }
+    @media (max-width: 600px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <h1>Иван Шугаев</h1>
-    <p>аналитик Executive Search, AI энтузиаст, лингвист, фотограф и просто хороший человек.</p>
-  </div>
+    <div class="wrapper">
+      <img src="https://picsum.photos/200" alt="Фото Ивана" class="avatar">
+      <div class="text">
+        <h1>Иван Шугаев</h1>
+        <p>аналитик Executive Search, AI энтузиаст, лингвист, фотограф и просто хороший человек.</p>
+      </div>
+    </div>
 </body>
 </html>
